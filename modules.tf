@@ -29,3 +29,10 @@ module "eks_add_ons" {
   oidc         = module.eks_cluster.oidc
   cluster_name = module.eks_cluster.cluster_name
 }
+
+module "eks_ec2" {
+  source       = "./modules/ec2"
+  project_name = var.project_name
+  tags         = var.tags
+  vpc          = module.eks_network.vpc
+}

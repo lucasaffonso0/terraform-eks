@@ -18,6 +18,7 @@ No providers.
 |------|--------|---------|
 | <a name="module_eks_add_ons"></a> [eks\_add\_ons](#module\_eks\_add\_ons) | ./modules/add-ons | n/a |
 | <a name="module_eks_cluster"></a> [eks\_cluster](#module\_eks\_cluster) | ./modules/cluster | n/a |
+| <a name="module_eks_ec2"></a> [eks\_ec2](#module\_eks\_ec2) | ./modules/ec2 | n/a |
 | <a name="module_eks_managed_node_group"></a> [eks\_managed\_node\_group](#module\_eks\_managed\_node\_group) | ./modules/managed-node-group | n/a |
 | <a name="module_eks_network"></a> [eks\_network](#module\_eks\_network) | ./modules/network | n/a |
 
