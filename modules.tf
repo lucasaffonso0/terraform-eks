@@ -22,8 +22,8 @@ module "eks_managed_node_group" {
   tags              = var.tags
 }
 
-module "eks_aws_load_balancer_controller" {
-  source       = "./modules/aws-load-balancer-controller"
+module "eks_add_ons" {
+  source       = "./modules/add-ons"
   project_name = var.project_name
   tags         = var.tags
   oidc         = module.eks_cluster.oidc
