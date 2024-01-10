@@ -31,8 +31,11 @@ module "eks_add_ons" {
 }
 
 module "eks_ec2" {
-  source       = "./modules/ec2"
-  project_name = var.project_name
-  tags         = var.tags
-  vpc          = module.eks_network.vpc
+  source         = "./modules/ec2"
+  project_name   = var.project_name
+  tags           = var.tags
+  vpc            = module.eks_network.vpc
+  public_subnet  = module.eks_network.subnet_pub_1a
+  private_subnet = module.eks_network.subnet_priv_1a
+  cluster_sg     = module.eks_cluster.cluster_sg
 }

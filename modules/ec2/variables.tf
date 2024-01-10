@@ -12,3 +12,18 @@ variable "vpc" {
   type        = string
   description = "VPC for SG"
 }
+
+variable "public_subnet" {
+  type        = string
+  description = "Subnet for Bastion Host"
+}
+
+variable "private_subnet" {
+  type        = string
+  description = "Subnet for MongoDB Host"
+}
+
+variable "cluster_sg" {
+  type        = string
+  description = "EKS Cluster Security Groups"
+}

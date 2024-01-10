@@ -1,0 +1,9 @@
+provider: "cloudflare"
+domainFilter: "joselucas.me"
+extraArgs:
+    - --cloudflare-proxied
+env:
+    - name: CF_API_KEY
+      value: ""
+    - name: CF_API_EMAIL
+      value: ""

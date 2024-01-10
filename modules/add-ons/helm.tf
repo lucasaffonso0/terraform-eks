@@ -33,3 +33,19 @@ resource "helm_release" "sealed_secrets" {
     value = "sealed-secrets-controller"
   }
 }
+
+resource "helm_release" "external_dns" {
+  name       = "external-dns"
+  repository = "https://kubernetes-sigs.github.io/external-dns/"
+  chart      = "external-dns"
+  version    = "1.13.1"
+  namespace  = "kube-system"
+
+  set {
+    name  = "policy"
+    value = "sync"
+  }
+  values = [
+    file("${path.module}/external-dns.yaml")
+  ]
+}
